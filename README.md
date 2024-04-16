@@ -1,3 +1,3 @@
 # HS Automation
 
-Web Automation for Rahkaran ERP using selenium.
+Web Automation for "Rahkaran ERP" With Python and Selenium.
