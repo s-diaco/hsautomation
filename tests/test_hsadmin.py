@@ -8,3 +8,4 @@ def test_play():
     bandleader.play()
     sleep(10)
     assert bandleader.currently_playing()
+    bandleader.browser.quit()
