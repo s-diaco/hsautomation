@@ -15,3 +15,4 @@ def test_play():
 
 def test_login():
     automator = wa()
+    automator.browser.quit()
