@@ -1,0 +1,4 @@
+LOGINURL = ""
+UNAME = "johar"
+PASSWD = "1402"
+FRONTPAGE = ""
