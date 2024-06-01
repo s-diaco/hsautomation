@@ -1,6 +1,7 @@
 from time import sleep
 
 from hsautomation.automation import WebAutomation as wa
+from hsautomation.urls import FRONTPAGE
 
 
 def test_play():
@@ -15,4 +16,5 @@ def test_play():
 
 def test_login():
     automator = wa()
+    assert FRONTPAGE.split(".aspx")[0] in automator.browser.current_url
     automator.browser.quit()

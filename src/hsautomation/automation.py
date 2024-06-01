@@ -1,8 +1,17 @@
-from hsautomation.urls import FRONTPAGE, LOGINURL, PASSWD, UNAME
 from time import sleep
 
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
+from hsautomation.urls import (
+    FRONTPAGE,
+    LOGINURL,
+    PASSWD,
+    PASSWDINPUTID,
+    UNAME,
+    UNAMEINPUTID,
+)
 
 
 class WebAutomation:
@@ -16,8 +25,12 @@ class WebAutomation:
             self.login()
 
     def login(self):
-        self.browser.get(LOGINURL)
+        self.browser.find_element(By.ID, UNAMEINPUTID).send_keys(UNAME)
+        self.browser.find_element(By.ID, PASSWDINPUTID).send_keys(PASSWD)
+        self.browser.find_element(By.ID, "submit").click()
         sleep(0.5)
 
     def is_logged_in(self) -> bool:
-        return False
+        if LOGINURL in self.browser.current_url:
+            return False
+        return True
