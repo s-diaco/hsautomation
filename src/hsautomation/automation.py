@@ -3,6 +3,7 @@ from time import sleep
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 from hsautomation.urls import (
     FRONTPAGE,
@@ -20,7 +21,10 @@ class WebAutomation:
         options.add_argument("--headless=new")
         self.browser = Chrome(options=options)
         self.browser.get(FRONTPAGE)
-        sleep(0.5)
+        # wait the ready state to be complete
+        WebDriverWait(driver=self.browser, timeout=10).until(
+            lambda x: x.execute_script("return document.readyState === 'complete'")
+        )
         if not self.is_logged_in():
             self.login()
 
@@ -28,7 +32,10 @@ class WebAutomation:
         self.browser.find_element(By.ID, UNAMEINPUTID).send_keys(UNAME)
         self.browser.find_element(By.ID, PASSWDINPUTID).send_keys(PASSWD)
         self.browser.find_element(By.ID, "submit").click()
-        sleep(0.5)
+        # wait the ready state to be complete
+        WebDriverWait(driver=self.browser, timeout=10).until(
+            lambda x: x.execute_script("return document.readyState === 'complete'")
+        )
 
     def is_logged_in(self) -> bool:
         if LOGINURL in self.browser.current_url:
