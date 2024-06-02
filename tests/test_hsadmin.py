@@ -3,7 +3,7 @@ from time import sleep
 import pytest
 
 from hsautomation.automation import WebAutomation as wa
-from hsautomation.urls import CSVURL, FRONTPAGE
+from hsautomation.urls import CSVURL, FRONTPAGE, REPORTURL
 
 
 def test_play():
@@ -19,7 +19,7 @@ def test_play():
 @pytest.mark.vcr()
 def test_login():
     automator = wa()
-    assert FRONTPAGE.split(".aspx")[0] in automator.browser.current_url
+    assert FRONTPAGE in automator.browser.current_url
     automator.browser.quit()
 
 
@@ -27,5 +27,13 @@ def test_login():
 def test_download_csv():
     automator = wa()
     automator.download_csv(dl_url=CSVURL)
+    sleep(10)
+    automator.browser.quit()
+
+
+@pytest.mark.vcr()
+def test_report_page():
+    automator = wa()
+    automator.download_csv(dl_url=REPORTURL)
     sleep(10)
     automator.browser.quit()

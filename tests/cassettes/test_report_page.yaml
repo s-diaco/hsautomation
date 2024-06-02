@@ -1,0 +1,395 @@
+interactions:
+- request:
+    body: '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome",
+      "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions":
+      {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "args": ["--headless=new"]}}}}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session
+  response:
+    body:
+      string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"125.0.6422.113","chrome":{"chromedriverVersion":"125.0.6422.141
+        (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186})","userDataDir":"C:\\Users\\johar\\AppData\\Local\\Temp\\scoped_dir21192_1704276735"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:10455"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
+        and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"792d742a053ad72bde76e57a209ee1b0"}}'
+    headers:
+      Content-Length:
+      - '884'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"url": "http://192.168.3.193/sg23g/x4e205b34/?rnd=638529346643286406"}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"script": "return document.readyState === ''complete''", "args": []}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+  response:
+    body:
+      string: '{"value":true}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: GET
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+  response:
+    body:
+      string: '{"value":"http://192.168.3.193/sg23g/x4e205b34/Authentication/Login.aspx?ReturnUrl=%2fsg23g%2fx4e205b34%2f%3frnd%3d638529346643286406"}'
+    headers:
+      Content-Length:
+      - '135'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"using": "css selector", "value": "[id=\"txtUsername\"]"}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+  response:
+    body:
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.7"}}'
+    headers:
+      Content-Length:
+      - '125'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"text": "johar", "value": ["j", "o", "h", "a", "r"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.7/value
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"using": "css selector", "value": "[id=\"txtPassword\"]"}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+  response:
+    body:
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.8"}}'
+    headers:
+      Content-Length:
+      - '125'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"text": "1402", "value": ["1", "4", "0", "2"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.8/value
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"using": "css selector", "value": "[id=\"submit\"]"}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+  response:
+    body:
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.33"}}'
+    headers:
+      Content-Length:
+      - '126'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.33/click
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"script": "return document.readyState === ''complete''", "args": []}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+  response:
+    body:
+      string: '{"value":false}'
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"script": "return document.readyState === ''complete''", "args": []}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+  response:
+    body:
+      string: '{"value":true}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"url": "http://192.168.3.193/sg23g/x4e205b34/?rnd=6385293466086406&page=Logistics%2FInventoryReports%2FInventoryStatus%2FInventoryStatusReport.aspx"}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: POST
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      User-Agent:
+      - selenium/4.19.0 (python windows)
+    method: DELETE
+    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0
+  response:
+    body:
+      string: '{"value":null}'
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - localhost:10452
+      User-Agent:
+      - Python-urllib/3.12
+    method: GET
+    uri: http://localhost:10452/shutdown
+  response:
+    body:
+      string: '{"sessionId":"","status":0,"value":null}'
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/json; charset=utf-8
+    status:
+      code: 200
+      message: OK
+version: 1
