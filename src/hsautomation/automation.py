@@ -41,3 +41,6 @@ class WebAutomation:
         if LOGINURL in self.browser.current_url:
             return False
         return True
+
+    def download_csv(self, dl_url):
+        self.browser.get(dl_url)
