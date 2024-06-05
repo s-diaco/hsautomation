@@ -1,6 +1,7 @@
 from time import sleep
 
 import pytest
+from selenium.webdriver.common.by import By
 
 from hsautomation.automation import WebAutomation as wa
 from hsautomation.urls import CSVURL, FRONTPAGE, REPORTURL
@@ -26,7 +27,7 @@ def test_login():
 @pytest.mark.vcr()
 def test_download_csv():
     automator = wa()
-    automator.download_csv(dl_url=CSVURL)
+    automator.browser.get(CSVURL)
     sleep(10)
     automator.browser.quit()
 
@@ -34,6 +35,18 @@ def test_download_csv():
 @pytest.mark.vcr()
 def test_report_page():
     automator = wa()
-    automator.download_csv(dl_url=REPORTURL)
+    automator.browser.get(REPORTURL)
     sleep(10)
+    automator.browser.find_element(
+        By.XPATH, "//*[@id='trStoreLevelStock']/input"
+    ).click()
+    sleep(10)
+    automator.browser.find_element(
+        By.ID, "sgMultiInputStores$ctl01$Selector"
+    ).send_keys("انبار محصول اینکو")
+    automator.browser.find_element(By.XPATH, '//*[@class="rtbUL"]/li[1]/a').click()
+    sleep(10)
+    automator.browser.find_element(By.XPATH, '//*[@class="rtbUL"]/li[2]/a').click()
+    sleep(10)
+
     automator.browser.quit()

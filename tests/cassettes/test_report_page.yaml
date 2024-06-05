@@ -3,7 +3,7 @@ interactions:
     body: '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome",
       "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions":
       {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-      "args": ["--headless=new"]}}}}'
+      "args": []}}}}'
     headers:
       Accept:
       - application/json
@@ -14,15 +14,15 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session
+    uri: http://localhost:11323/session
   response:
     body:
-      string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"125.0.6422.113","chrome":{"chromedriverVersion":"125.0.6422.141
-        (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186})","userDataDir":"C:\\Users\\johar\\AppData\\Local\\Temp\\scoped_dir21192_1704276735"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:10455"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
-        and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"792d742a053ad72bde76e57a209ee1b0"}}'
+      string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"125.0.6422.142","chrome":{"chromedriverVersion":"125.0.6422.141
+        (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186})","userDataDir":"C:\\Users\\johar\\AppData\\Local\\Temp\\scoped_dir12632_870370982"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:11327"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
+        and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"2a61fda46dc3de485f9ceb0c7c272e4c"}}'
     headers:
       Content-Length:
-      - '884'
+      - '883'
       Content-Type:
       - application/json; charset=utf-8
       cache-control:
@@ -42,7 +42,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/url
   response:
     body:
       string: '{"value":null}'
@@ -68,7 +68,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/execute/sync
   response:
     body:
       string: '{"value":true}'
@@ -94,7 +94,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: GET
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/url
   response:
     body:
       string: '{"value":"http://192.168.3.193/sg23g/x4e205b34/Authentication/Login.aspx?ReturnUrl=%2fsg23g%2fx4e205b34%2f%3frnd%3d638529346643286406"}'
@@ -120,10 +120,10 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element
   response:
     body:
-      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.7"}}'
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.2"}}'
     headers:
       Content-Length:
       - '125'
@@ -146,7 +146,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.7/value
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element/f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.2/value
   response:
     body:
       string: '{"value":null}'
@@ -172,10 +172,10 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element
   response:
     body:
-      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.8"}}'
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.3"}}'
     headers:
       Content-Length:
       - '125'
@@ -198,7 +198,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.8/value
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element/f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.3/value
   response:
     body:
       string: '{"value":null}'
@@ -224,10 +224,10 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element
   response:
     body:
-      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.33"}}'
+      string: '{"value":{"element-6066-11e4-a52e-4f735466cecf":"f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.32"}}'
     headers:
       Content-Length:
       - '126'
@@ -250,7 +250,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/element/f.FA6A27B36F0E84D588591FCD9F31FC94.d.1C08E76A0050482AB43E2B90C80CC91A.e.33/click
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element/f.28AE142A9CAF484A99B8181F63ED741D.d.5DBF0CC125EB09D999409B4E70E1CC83.e.32/click
   response:
     body:
       string: '{"value":null}'
@@ -276,7 +276,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/execute/sync
   response:
     body:
       string: '{"value":false}'
@@ -302,7 +302,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/execute/sync
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/execute/sync
   response:
     body:
       string: '{"value":true}'
@@ -328,7 +328,7 @@ interactions:
       User-Agent:
       - selenium/4.19.0 (python windows)
     method: POST
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0/url
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/url
   response:
     body:
       string: '{"value":null}'
@@ -343,7 +343,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: null
+    body: '{"using": "xpath", "value": "//*[@id=''trStoreLevelStock'']/input"}'
     headers:
       Accept:
       - application/json
@@ -353,43 +353,30 @@ interactions:
       - application/json;charset=UTF-8
       User-Agent:
       - selenium/4.19.0 (python windows)
-    method: DELETE
-    uri: http://localhost:10452/session/792d742a053ad72bde76e57a209ee1b0
+    method: POST
+    uri: http://localhost:11323/session/2a61fda46dc3de485f9ceb0c7c272e4c/element
   response:
     body:
-      string: '{"value":null}'
+      string: '{"value":{"error":"no such element","message":"no such element: Unable
+        to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=''trStoreLevelStock'']/input\"}\n  (Session
+        info: chrome=125.0.6422.142)","stacktrace":"\tGetHandleVerifier [0x00007FF684431F52+60322]\n\t(No
+        symbol) [0x00007FF6843ACEC9]\n\t(No symbol) [0x00007FF684267EBA]\n\t(No symbol)
+        [0x00007FF6842B7676]\n\t(No symbol) [0x00007FF6842B773C]\n\t(No symbol) [0x00007FF6842FE967]\n\t(No
+        symbol) [0x00007FF6842DC25F]\n\t(No symbol) [0x00007FF6842FBC80]\n\t(No symbol)
+        [0x00007FF6842DBFC3]\n\t(No symbol) [0x00007FF6842A9617]\n\t(No symbol) [0x00007FF6842AA211]\n\tGetHandleVerifier
+        [0x00007FF6847494AD+3301629]\n\tGetHandleVerifier [0x00007FF6847936D3+3605283]\n\tGetHandleVerifier
+        [0x00007FF684789450+3563680]\n\tGetHandleVerifier [0x00007FF6844E4326+790390]\n\t(No
+        symbol) [0x00007FF6843B750F]\n\t(No symbol) [0x00007FF6843B3404]\n\t(No symbol)
+        [0x00007FF6843B3592]\n\t(No symbol) [0x00007FF6843A2F9F]\n\tBaseThreadInitThunk
+        [0x00007FFF8C31257D+29]\n\tRtlUserThreadStart [0x00007FFF8CD0AA48+40]\n"}}'
     headers:
       Content-Length:
-      - '14'
+      - '1068'
       Content-Type:
       - application/json; charset=utf-8
       cache-control:
       - no-cache
     status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Connection:
-      - close
-      Host:
-      - localhost:10452
-      User-Agent:
-      - Python-urllib/3.12
-    method: GET
-    uri: http://localhost:10452/shutdown
-  response:
-    body:
-      string: '{"sessionId":"","status":0,"value":null}'
-    headers:
-      Connection:
-      - close
-      Content-Length:
-      - '40'
-      Content-Type:
-      - application/json; charset=utf-8
-    status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

@@ -18,7 +18,7 @@ from hsautomation.urls import (
 class WebAutomation:
     def __init__(self, front_pg_url: str = FRONTPAGE) -> None:
         options = Options()
-        options.add_argument("--headless=new")
+        # options.add_argument("--headless=new")
         self.browser = Chrome(options=options)
         self.browser.get(front_pg_url)
         # wait the ready state to be complete
@@ -41,6 +41,3 @@ class WebAutomation:
         if LOGINURL in self.browser.current_url:
             return False
         return True
-
-    def download_csv(self, dl_url):
-        self.browser.get(dl_url)
