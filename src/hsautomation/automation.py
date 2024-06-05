@@ -16,11 +16,11 @@ from hsautomation.urls import (
 
 
 class WebAutomation:
-    def __init__(self) -> None:
+    def __init__(self, front_pg_url: str = FRONTPAGE) -> None:
         options = Options()
         options.add_argument("--headless=new")
         self.browser = Chrome(options=options)
-        self.browser.get(FRONTPAGE)
+        self.browser.get(front_pg_url)
         # wait the ready state to be complete
         WebDriverWait(driver=self.browser, timeout=10).until(
             lambda x: x.execute_script("return document.readyState === 'complete'")
