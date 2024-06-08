@@ -1,3 +1,4 @@
+from pathlib import Path
 from time import sleep
 
 from selenium.webdriver import Chrome
@@ -19,6 +20,12 @@ class WebAutomation:
     def __init__(self, front_pg_url: str = FRONTPAGE) -> None:
         options = Options()
         # options.add_argument("--headless=new")
+
+        # set default download dir
+        download_dir = Path.cwd() / "csv_download"
+        prefs = {"download.default_directory": str(download_dir)}
+        options.add_experimental_option("prefs", prefs)
+
         self.browser = Chrome(options=options)
         self.browser.get(front_pg_url)
         # wait the ready state to be complete
